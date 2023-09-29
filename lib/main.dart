@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mydemo4/uy_sahifa.dart';
+import 'package:mydemo4/yangi_sahifa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +33,12 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-
+      home:  UySahifa(),
+      routes: {
+        UySahifa.id: (context) =>  UySahifa(),
+        YangiSahifa.id: (context) => YangiSahifa(),
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
